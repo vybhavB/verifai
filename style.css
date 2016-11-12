@@ -121,3 +121,15 @@ nav {
   padding: 10px;
   border-bottom: 1px solid gray;
 }
+
+.buttons {
+  padding: 10px;
+}
+
+.quicksand {
+  font-family: 'Quicksand', sans-serif;
+}
+
+input {
+  color: white;
+}

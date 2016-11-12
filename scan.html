@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100vh; overflow: hidden;">
   <head>
     <meta charset="utf-8">
-    <title>Verifai | home</title>
+    <title>Verifai | dashboard</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
     <script src="index.js" charset="utf-8"></script>
+    <script src="dashboard.js"></script>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
@@ -32,27 +32,14 @@
         </ul>
       </div>
     </nav>
-    <div class="body">
-      <div class="body valign-wrapper">
+    <!-- this is just for experimenting with the UI. Real data will be loaded using firebase -->
+    <div class="fill">
+      <div class="fill valign-wrapper">
         <div class="valign cont fillh">
-          <h1 class="title-text white-text">Verifai</h1>
-          <h4 class="subtitle-text white-text quicksand">Revolutionizing the classroom</h4>
-          <a href="#desc" class="button button-white centerize" id="dive">Explore</a>
-        </div>
-      </div>
-    </div>
-    <div class="description" id="desc">
-      <div class="row">
-        <div class="col s12 m6 l8 valign-wrapper desc">
-          <div class="container valign">
-            <h4>What is verifai?</h4>
-            <p>
-              Verify is a ....
-            </p>
-          </div>
-        </div>
-        <div class="col m6 l4 hide-on-small teacher-img">
-
+          <h1 >AP Physics</h1>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?data=12n1kj23k2j3n&amp;size=300x300" alt="12n1kj23k2j3n" />
+          <h4  >Add the class using the Verifai app!</h4>
+          <a href="dashboard.html" class="btn blue text-white">Return</a>
         </div>
       </div>
     </div>
