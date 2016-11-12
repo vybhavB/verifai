@@ -8,5 +8,6 @@ var config = {
 
 $(window).ready(function() {
   $(".button-collapse").sideNav();
+  $('.collapsible').collapsible();
   firebase.initializeApp(config);
 });
