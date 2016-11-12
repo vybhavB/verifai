@@ -12,6 +12,7 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script> 
     <script src="index.js" charset="utf-8"></script>
 
     <script src="dashboard.js"></script>
@@ -27,7 +28,7 @@
           <li><a href="teacherlogin.html">Log out</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li><a href="teacherlogin.html">Log out</a></li>
+          <li><a href="teacherlogin.html" onclick="return logOut();">Log out</a></li>
         </ul>
       </div>
     </nav>
@@ -41,7 +42,7 @@
             <input placeholder="Add a class" style="width: 80%; box-shadow: none; background-color: rgba(0, 0, 0, 0.1); border-bottom: 0px; margin-top: 10px; border-radius: 5px;" class="white-text add-input" type="text" id="new-title">
             <a href="#" class="btn-flat waves-effect waves-light white-text"><i class="material-icons">add</i></a>
           </li>
-          <!--- this is just for experimenting with the UI. Real data will be loaded using firebase --->
+          <!--- this is just for experimenting with the UI. Real data will be loaded using firebase -->
           <li class="collection-item">
             <div class="collapsible-header">
               <b>AP Physics </b>class id: 12n1kj23k2j3n
