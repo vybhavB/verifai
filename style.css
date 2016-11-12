@@ -52,3 +52,16 @@ nav {
   .center {
     margin: auto;
   }
+
+  .add {
+    background-color: rgb(66, 134, 244);
+    width: 100vw;
+    padding-left: 10px;
+  }
+
+  .add-input {
+    margin: none;
+    box-shadow: none;
+    background-color: rgb(56, 124, 234);
+    
+  }
