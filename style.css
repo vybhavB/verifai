@@ -1,0 +1,54 @@
+nav {
+  background-color: rgb(66, 134, 244);
+}
+
+.login-body {
+  background-image: url("background.png");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* label color */
+   .input-field label {
+     color: #fff;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: rgb(66, 134, 244);
+   }
+
+   .input-field input[type=password]:focus + label {
+     color: rgb(66, 134, 244);
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid rgb(66, 134, 244);
+     box-shadow: 0 1px 0 0 rgb(66, 134, 244);
+   }
+   .input-field input[type=password]:focus {
+     border-bottom: 1px solid rgb(66, 134, 244);
+     box-shadow: 0 1px 0 0 rgb(66, 134, 244);
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid rgb(66, 134, 244);
+     box-shadow: 0 1px 0 0 rgb(66, 134, 244);
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #fff;
+     box-shadow: 0 1px 0 0 #fff
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #fff;
+   }
+
+  .fillh {
+    width: 100vw;
+  }
+
+  .center {
+    margin: auto;
+  }

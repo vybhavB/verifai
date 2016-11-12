@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100vh; overflow: hidden;">
   <head>
     <meta charset="utf-8">
-    <title>Verifai | home</title>
+    <title>Verifai | teacher login</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -29,7 +29,26 @@
           <li><a href="#">Student</a></li>
         </ul>
       </div>
-
     </nav>
+    <div class="login-body">
+      <div class="valign-wrapper fillh">
+        <div class="center">
+          <h1 class="white-text">Teacher Login</h1>
+          <div class="input-field">
+             <input id="teacher-user" type="text">
+             <label for="teacher-user">Username</label>
+           </div>
+           <div class="input-field">
+              <input id="teacher-pass" type="password">
+              <label for="teacher-pass">Password</label>
+            </div>
+            <a href="#" class="btn blue text-white" id="loginButton">Login</a>
+            <p class="white-text">
+              or
+            </p>
+            <a href="#" class="btn blue text-white">Sign Up</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
