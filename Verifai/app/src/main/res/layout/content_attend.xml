@@ -12,29 +12,38 @@
     tools:context="com.apottaba.verifai.AttendActivity"
     tools:showIn="@layout/activity_attend">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get Location"
-        android:id="@+id/location_button"
-        android:layout_marginTop="141dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Coordinates:"
         android:id="@+id/coord_textview"
-        android:layout_below="@+id/location_button"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="52dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SCAN"
         android:id="@+id/scan_btn"
-        android:layout_alignBottom="@+id/location_button"
-        android:layout_alignStart="@+id/location_button"
-        android:layout_marginBottom="43dp" />
+        android:layout_above="@+id/add_class_btn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Class"
+        android:id="@+id/add_class_btn"
+        android:layout_gravity="center_horizontal"
+        android:layout_above="@+id/coord_textview"
+        android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listClassesView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/scan_btn" />
+
 </RelativeLayout>

@@ -33,10 +33,7 @@
             android:name=".AttendActivity"
             android:label="@string/title_activity_attend"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".QRActivity"
-            android:label="@string/title_activity_qr"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".RegisterActivity"></activity>
     </application>
 
 </manifest>

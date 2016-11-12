@@ -30,10 +30,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.firebase.auth.FirebaseAuthException;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.provider.FirebaseInitProvider;
+//import com.google.firebase.auth.FirebaseAuthException;
+//import com.google.firebase.auth.FirebaseUser;
+//import com.google.firebase.iid.FirebaseInstanceId;
+//import com.google.firebase.provider.FirebaseInitProvider;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,6 +94,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             @Override
             public void onClick(View view) {
                 attemptLogin();
+            }
+        });
+
+        Button registerButton = (Button) findViewById(R.id.register_button);
+        registerButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent launchRegisterActivity = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(launchRegisterActivity);
             }
         });
 
