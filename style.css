@@ -59,9 +59,65 @@ nav {
     padding-left: 10px;
   }
 
+.body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("background.png");
+}
+
   .add-input {
     margin: none;
     box-shadow: none;
     background-color: rgb(56, 124, 234);
-    
+
   }
+
+  .teacher-img {
+    background-image: url("teacher.jpeg");
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .desc {
+    height: 100vh;
+  }
+
+  .title-text {
+
+  }
+
+.fill {
+  width: 100vw;
+  height: 100vh;
+}
+
+  .button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.button-white {
+  transition: background-color 0.5s ease;
+  background-color: white;
+  color: black
+}
+
+.centerize {
+  margin: auto;
+}
+
+.cont {
+  margin-top: -200px;
+  text-align: center;
+}
+
+.button-white:hover {
+  background-color: rgba(255, 255, 255, 0.75);;
+}
+
+.students {
+  padding: 10px;
+  border-bottom: 1px solid gray;
+}
