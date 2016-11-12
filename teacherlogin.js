@@ -1,10 +1,28 @@
-$(window).ready(function() {
+function handleAuthChanges(){
+
+  firebase.auth().onAuthStateChanged(function(user){
+
+    if(user){
+      window.location = "dashboard.html";
+    }else{
+      window.location = "teacherlogin.html";
+    }
+
+  });
+
+}
+
+window.onLoad = function() {
   var TEACHER_EMAIL = document.getElementById('teacher-user').value;
   var TEACHER_PASSWORD = document.getElementById('teacher-pass').value;
   var SIGNUP_BUTTON = document.getElementById('signUpButton');
   var LOGIN_BUTTON = document.getElementById('loginButton');
 
+
   SIGNUP_BUTTON.onclick =function() {
+    handleAuthChanges();
+    console.log(TEACHER_EMAIL);
+    console.log(TEACHER_PASSWORD);
     firebase.auth().createUserWithEmailAndPassword(TEACHER_EMAIL, TEACHER_PASSWORD).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -24,6 +42,7 @@ $(window).ready(function() {
   }
 
   LOGIN_BUTTON.onclick=function() {
+    handleAuthChanges();
     firebase.auth().signInWithEmailAndPassword(TEACHER_EMAIL, TEACHER_PASSWORD).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -41,4 +60,4 @@ $(window).ready(function() {
       console.error(errorMessage);
     });
   }
-});
+}
