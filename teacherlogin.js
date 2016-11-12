@@ -27,17 +27,18 @@ function signIn(){
       localStorage.setItem("teacher-email", TEACHER_EMAIL);
 
       firebase.auth().createUserWithEmailAndPassword(TEACHER_EMAIL, TEACHER_PASSWORD).catch(function(error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      Materialize.toast("An error has occurred.",2000);
-      console.log("Error: " + errorCode + "| message: " + errorMessage);
-      TEACHER_EMAIL = "";
-      TEACHER_PASSWORD = "";
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        Materialize.toast("An error has occurred.",2000);
+        console.log("Error: " + errorCode + "| message: " + errorMessage);
+        TEACHER_EMAIL = "";
+        TEACHER_PASSWORD = "";
     });
    }
   }
 
   function login(){
+    handleAuthChanges();
     if(firebase.auth().currentUser){
             firebase.auth().signOut();
         }else {

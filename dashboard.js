@@ -1,11 +1,12 @@
 window.onLoad = function() {
-  var LOGOUT_BUTTON = document.getElementById('logout');
-
-  LOGOUT_BUTTON.onclick=functino() {
-    firebase.auth().signOut().then(function() {
-      console.log('The sign out was successful.');
-    }, function(error) {
-      console.log('An error occured.');
-    });
+  function logout() {
+    	firebase.auth().signOut();
+    	firebase.auth().onAuthStateChanged(function (user) {
+    	  if(user){
+    	  } else {
+    	    window.location = "loginProfessor.html";
+    	  }
+    	});
+    }
   }
-}
+
