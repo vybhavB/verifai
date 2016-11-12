@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Verifai | home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <!--<script type="text/babel">
+
+    class Invite extends React.Component {
+      render() {
+        return <tr><td className="fillh100">{this.props.name}<p className="inline"><a href="#" className="btn accept red"> accept</a><a href="#" className="btn deny green"> deny</a></p></td></tr>;
+      }
+    }
+
+    class Requests extends React.Component {
+      render() {
+        var rows = [];
+        var lastCategory = null;
+        this.props.invites.forEach(function(invite) {
+          rows.push(<Invite name={invite.name} key={invite.name} />);
+        });
+        return (<div className="requests">
+        <table>
+          <tbody>
+          {rows}
+          </tbody>
+          </table>
+        </div>);
+      }
+    }
+
+    class Buttons extends React.Component {
+      render() {
+        return (<div className="buttons">
+          <a href="scan.html" className="btn blue text-white">Add Students</a>
+          <a href="#" className="btn blue text-white">Take Attendance</a>
+        </div>);
+      }
+    }
+
+    class Student extends React.Component {
+      render() {
+        return <div className="chip"> {this.props.name}</div>;
+      }
+    }
+
+    class Students extends React.Component {
+      render() {
+        var students = [];
+        this.props.students.forEach(function(student) {
+          students.push(<Student name={student.name} key={student.name} />);
+        });
+        return (<div className="students">
+          <h5>Students</h5>
+          {students}
+          </div>);
+      }
+    }
+
+    class Class extends React.Component {
+      render() {
+        return (<li className="collection-item">
+          <div className="collapsible-header">
+            <b>{this.props.classname}</b>class id: {this.props.classID}
+          </div>
+          <div className="collapsible-body container">
+            <Students students={this.props.students} />
+            <Buttons />
+            <Requests invites={this.props.invites} />
+          </div>
+        </li>);
+      }
+    }
+
+    class Table extends React.Component {
+      render() {
+        var rows = [];
+        this.props.classes.forEach(function(clas) {
+          rows.push(<Class students={clas.students} invites={clas.invites} classname={clas.classname} classid={clas.classid}/>);
+        });
+        return(<div class="fillh">
+          <ul className="collapsible" data-collapsible="accordion">
+            {rows}</ul>
+          </div>);
+      }
+    }
+
+    var CLASS = [{classname: "AP Physics", classid: "1kj21k2j312", students: {{name: 'Sriharsha Guduguntla'}, {name: 'Jishnu'}, {name: 'Anirudh'}}, invites: {{name: 'Sanket'}, {name: 'Shreyas'}}}];
+
+    var STUDENTS = [{name: 'Sriharsha Guduguntla'}, {name: 'Jishnu'}, {name: 'Anirudh'}];
+
+    var INVITES = [{name: 'Sanket'}, {name: 'Shreyas'}]
+
+    ReactDOM.render(
+      <Table classes={CLASS} />,
+      document.getElementById('container')
+    );
+
+  </script>-->
+  <!--<script type="text/javascript">
+  "use strict";
+
+  import React from 'react';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Invite = function (_React$Component) {
+_inherits(Invite, _React$Component);
+
+function Invite() {
+  _classCallCheck(this, Invite);
+
+  return _possibleConstructorReturn(this, (Invite.__proto__ || Object.getPrototypeOf(Invite)).apply(this, arguments));
+}
+
+_createClass(Invite, [{
+  key: "render",
+  value: function render() {
+    return React.createElement(
+      "tr",
+      null,
+      React.createElement(
+        "td",
+        { "class": "fillh100" },
+        this.props.name,
+        React.createElement(
+          "p",
+          { "class": "inline" },
+          React.createElement(
+            "a",
+            { href: "#", "class": "btn accept red" },
+            " accept"
+          ),
+          React.createElement(
+            "a",
+            { href: "#", "class": "btn deny green" },
+            " deny"
+          )
+        )
+      )
+    );
+  }
+}]);
+
+return Invite;
+}(React.Component);
+
+var Requests = function (_React$Component2) {
+_inherits(Requests, _React$Component2);
+
+function Requests() {
+  _classCallCheck(this, Requests);
+
+  return _possibleConstructorReturn(this, (Requests.__proto__ || Object.getPrototypeOf(Requests)).apply(this, arguments));
+}
+
+_createClass(Requests, [{
+  key: "render",
+  value: function render() {
+    var rows = [];
+    var lastCategory = null;
+    this.props.invites.forEach(function (invite) {
+      rows.push(React.createElement(Invite, { name: invite.name }));
+      lastCategory = invite.name;
+    });
+    return React.createElement(
+      "div",
+      { "class": "requests" },
+      React.createElement(
+        "table",
+        null,
+        React.createElement(
+          "tbody",
+          null,
+          rows
+        )
+      )
+    );
+  }
+}]);
+
+return Requests;
+}(React.Component);
+
+var Buttons = function (_React$Component3) {
+_inherits(Buttons, _React$Component3);
+
+function Buttons() {
+  _classCallCheck(this, Buttons);
+
+  return _possibleConstructorReturn(this, (Buttons.__proto__ || Object.getPrototypeOf(Buttons)).apply(this, arguments));
+}
+
+_createClass(Buttons, [{
+  key: "render",
+  value: function render() {
+    return React.createElement(
+      "div",
+      { "class": "buttons" },
+      React.createElement(
+        "a",
+        { href: "scan.html", "class": "btn blue text-white" },
+        "Add Students"
+      ),
+      React.createElement(
+        "a",
+        { href: "#", "class": "btn blue text-white" },
+        "Take Attendance"
+      )
+    );
+  }
+}]);
+
+return Buttons;
+}(React.Component);
+
+var Student = function (_React$Component4) {
+_inherits(Student, _React$Component4);
+
+function Student() {
+  _classCallCheck(this, Student);
+
+  return _possibleConstructorReturn(this, (Student.__proto__ || Object.getPrototypeOf(Student)).apply(this, arguments));
+}
+
+_createClass(Student, [{
+  key: "render",
+  value: function render() {
+    return React.createElement(
+      "div",
+      { "class": "chip" },
+      " ",
+      this.props.name
+    );
+  }
+}]);
+
+return Student;
+}(React.Component);
+
+var Students = function (_React$Compnent) {
+_inherits(Students, _React$Compnent);
+
+function Students() {
+  _classCallCheck(this, Students);
+
+  return _possibleConstructorReturn(this, (Students.__proto__ || Object.getPrototypeOf(Students)).apply(this, arguments));
+}
+
+_createClass(Students, [{
+  key: "render",
+  value: function render() {
+    var students = [];
+    this.props.students.forEach(function (student) {
+      rows.push(React.createElement(Student, { name: student.name }));
+      lastCategory = student.name;
+    });
+    return React.createElement(
+      "div",
+      { "class": "students" },
+      React.createElement(
+        "h5",
+        null,
+        "Students"
+      ),
+      students
+    );
+  }
+}]);
+
+return Students;
+}(React.Compnent);
+
+var Class = function (_React$Component5) {
+_inherits(Class, _React$Component5);
+
+function Class() {
+  _classCallCheck(this, Class);
+
+  return _possibleConstructorReturn(this, (Class.__proto__ || Object.getPrototypeOf(Class)).apply(this, arguments));
+}
+
+_createClass(Class, [{
+  key: "render",
+  value: function render() {
+    React.createElement(
+      "li",
+      { "class": "collection-item" },
+      React.createElement(
+        "div",
+        { "class": "collapsible-header" },
+        React.createElement(
+          "b",
+          null,
+          this.props.className
+        ),
+        "class id: ",
+        this.props.classID
+      ),
+      React.createElement(
+        "div",
+        { "class": "collapsible-body container" },
+        React.createElement(Students, { students: this.props.students }),
+        React.createElement(Buttons, null),
+        React.createElement(Invites, { invites: this.props.invites })
+      )
+    );
+  }
+}]);
+
+return Class;
+}(React.Component);
+
+var STUDENTS = [{ name: 'Sriharsha Guduguntla' }, { name: 'Jishnu' }, { name: 'Anirudh' }];
+
+var INVITES = [{ name: 'Sanket' }, { name: 'Shreyas' }];
+
+ReactDOM.render(React.createElement(Class, { students: STUDENTS, invites: INVITES }), document.getElementById('container'));
+  </script>-->
+    <script src="index.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo">Verifai</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down top-nav">
+          <li><a href="teacherlogin.html">Log out</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="teacherlogin.html">Log out</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="fillh" id="container">
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "969001895612",
+    "firebase_url": "https://verifi-55b09.firebaseio.com",
+    "project_id": "verifi-55b09",
+    "storage_bucket": "verifi-55b09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969001895612:android:042698021a0f8920",
+        "android_client_info": {
+          "package_name": "com.apottaba.verifai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969001895612-m0pitmqo91l7mspflit7sts51skb4ovq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUCoOA1TJ1e4ENEbuwNGb1_eI4C_4f4k0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
