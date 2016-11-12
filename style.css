@@ -75,6 +75,7 @@ nav {
   .teacher-img {
     background-image: url("teacher.jpeg");
     background-size: cover;
+    background-position: center;
     height: 100vh;
   }
 
@@ -83,7 +84,7 @@ nav {
   }
 
   .title-text {
-
+    font-size: 100px;
   }
 
 .fill {
@@ -132,4 +133,22 @@ nav {
 
 input {
   color: white;
+}
+
+.inline {
+  display: inline;
+}
+
+.accept {
+  /*background-color: rgb(71, 207, 137);*/
+  color: white;
+}
+
+.deny {
+  /*background-color: rgb(223, 24, 37);*/
+  color: white;
+}
+
+.fillh100 {
+  width: 100%;
 }
