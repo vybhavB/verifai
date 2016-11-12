@@ -1,6 +1,8 @@
 var database = firebase.database();
 
 var user = firebase.auth().currentUser;
+
+if (user) {
   var append = "";
   var name = user.displayName;
   database.ref("/teachers/" + name).once('value', function(snapshot) {
@@ -16,15 +18,16 @@ var user = firebase.auth().currentUser;
       append += '<div class="requests"><h5>Class Requests</h5><table><tbody>';
       database.ref("/teachers/" + name + "/" + child.key() + "/requests").once('value', function(snap) {
         snap.forEach(function (chil) {
-          append += '<tr><td class="fillh100">' + chil.val() + '<p class="inline"><a href="#" onclick="accept('+ name + ", " + child.key() + ", " + chil.val() +')" class="btn accept red"> accept</a><a href="#" onclick="reject('+ name + ", " + child.key() + ", " + chil.val() +')" class="btn deny green"> deny</a></p></td></tr>';
+          append += '<tr><td class="fillh100">' + chil.val() + '<p class="inline"><a href="#" onclick="accept('+ name + ", " + child.key() ", " + chil.val() +')" class="btn accept red"> accept</a><a href="#" onclick="reject('+ name + ", " + child.key() ", " + chil.val() +')" class="btn deny green"> deny</a></p></td></tr>';
         });
       });
       append += '</tbody></table></div></div></li>';
     });
   });
   $("#class-info").append(append);
-
-  // window.location = "teacherlogin.html";
+} else {
+  window.location = "teacherlogin.html";
+}
 
 function accept(teacher, classname, name) {
   database.ref("/teacher/" + teacher + "/" + classname + "/students").push(name);
@@ -45,14 +48,15 @@ $(document).ready(function () {
   $('#add').click(function() {
     database.ref("/teachers/" + user.displayName + "/").push({title:  $("#newclass").val()});
   });
+  $('#logout').click(logout());
 });
 
 function logout() {
-    firebase.auth().signOut().then(function() {
-      window.location("index.html");
-    }, function(error) {
-      Materialize.toast("An error has occured");
-      console.log(error);
+    firebase.auth().signOut();
+    firebase.auth().onAuthStateChanged(function (user) {
+      if(user){
+      } else {
+        window.location = "loginProfessor.html";
+      }
     });
-    
   }
