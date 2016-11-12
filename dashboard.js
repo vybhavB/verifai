@@ -48,4 +48,15 @@ $(document).ready(function () {
   $('#add').click(function() {
     database.ref("/teachers/" + user.displayName + "/").push({title:  $("#newclass").val()});
   });
+  $('#logout').click(logout());
 });
+
+function logout() {
+    firebase.auth().signOut();
+    firebase.auth().onAuthStateChanged(function (user) {
+      if(user){
+      } else {
+        window.location = "loginProfessor.html";
+      }
+    });
+  }

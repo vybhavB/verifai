@@ -12,6 +12,7 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script> 
     <script src="index.js" charset="utf-8"></script>
 
     <script src="dashboard.js"></script>
@@ -24,10 +25,10 @@
       <div class="nav-wrapper container">
         <a href="#" class="brand-logo">Verifai</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down top-nav">
-          <li><a href="teacherlogin.html">Log out</a></li>
+          <li><a href="teacherlogin.html" id="logout">Log out</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li><a href="teacherlogin.html">Log out</a></li>
+          <li><a href="teacherlogin.html" id="logout" onclick="return logout();">Log out</a></li>
         </ul>
       </div>
     </nav>
@@ -38,8 +39,56 @@
       <div class="fillh">
         <ul class="collapsible" id="class-info" data-collapsible="accordion">
           <li class="collection-header add">
+<<<<<<< HEAD
             <input placeholder="Add a class" id="newclass" style="width: 80%; box-shadow: none; background-color: rgba(0, 0, 0, 0.1); border-bottom: 0px; margin-top: 10px; border-radius: 5px;" class="white-text add-input" type="text" id="new-title">
             <a href="#" id="add" class="btn-flat waves-effect waves-light white-text"><i class="material-icons">add</i></a>
+=======
+            <input placeholder="Add a class" style="width: 80%; box-shadow: none; background-color: rgba(0, 0, 0, 0.1); border-bottom: 0px; margin-top: 10px; border-radius: 5px;" class="white-text add-input" type="text" id="new-title">
+            <a href="#" class="btn-flat waves-effect waves-light white-text"><i class="material-icons">add</i></a>
+          </li>
+          <!--- this is just for experimenting with the UI. Real data will be loaded using firebase -->
+          <li class="collection-item">
+            <div class="collapsible-header">
+              <b>AP Physics </b>class id: 12n1kj23k2j3n
+            </div>
+            <div class="collapsible-body container">
+              <div class="students">
+                <h5>Students</h5>
+                <div class="chip">
+                  Sai
+                </div>
+                <div class="chip">
+                  Sai
+                </div>
+                <div class="chip">
+                  Sai
+                </div>
+                <div class="chip">
+                  Sai
+                </div>
+              </div>
+              <div class="buttons">
+                <a href="scan.html" class="btn blue text-white">Add Students</a>
+                <a href="#" class="btn blue text-white">Take Attendance</a>
+              </div>
+              <div class="requests">
+                <h5>Class Requests</h5>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="fillh100">
+                        Sriharsha Guduguntla
+                        <p class="inline">
+                          <a href="#" class="btn accept red"> accept</a>
+                          <a href="#" class="btn deny green"> deny</a>
+                        </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+>>>>>>> origin/master
           </li>
         </ul>
       </div>
