@@ -39,6 +39,11 @@ window.onLoad = function() {
       }
       console.error(errorMessage);
     });
+    var user = firebase.auth().currentUser;
+    if (user) {
+      var name = user.displayName;
+      database.ref("/teachers/" + name).push({type: "teacher"});
+    }
   }
 
   LOGIN_BUTTON.onclick=function() {
